@@ -38,6 +38,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4223553884129680}
   - component: {fileID: 54408285216670576}
+  - component: {fileID: 114803070181979728}
+  - component: {fileID: 114554010047725754}
   m_Layer: 9
   m_Name: Empty_4
   m_TagString: Enemy
@@ -55,7 +57,7 @@ GameObject:
   - component: {fileID: 4910266774268542}
   - component: {fileID: 33445178373029926}
   - component: {fileID: 23711139485545786}
-  - component: {fileID: 135966236840680844}
+  - component: {fileID: 136518073132198640}
   m_Layer: 9
   m_Name: Fuselage
   m_TagString: Untagged
@@ -73,7 +75,7 @@ GameObject:
   - component: {fileID: 4172451495971370}
   - component: {fileID: 33414750232133046}
   - component: {fileID: 23954063602516126}
-  - component: {fileID: 135066766467343646}
+  - component: {fileID: 136881689196166646}
   m_Layer: 9
   m_Name: WingR
   m_TagString: Untagged
@@ -91,7 +93,7 @@ GameObject:
   - component: {fileID: 4606965643191192}
   - component: {fileID: 33401919034413130}
   - component: {fileID: 23961397875119052}
-  - component: {fileID: 135296145121357278}
+  - component: {fileID: 136939004199426058}
   m_Layer: 9
   m_Name: WingL
   m_TagString: Untagged
@@ -351,30 +353,72 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 78
   m_CollisionDetection: 0
---- !u!135 &135066766467343646
-SphereCollider:
+--- !u!114 &114554010047725754
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1859235801920254}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_GameObject: {fileID: 1526323983586236}
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &135296145121357278
-SphereCollider:
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e8492fb8f26e4c399594172a09c5ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 3.5
+  keepOnScreen: 0
+  isOnScreen: 1
+  camWidth: 0
+  camHeight: 0
+  offRight: 0
+  offLeft: 0
+  offUp: 0
+  offDown: 0
+--- !u!114 &114803070181979728
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1885910551756700}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_GameObject: {fileID: 1526323983586236}
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d03e0137fd690154990b6e8017dd5973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  fireRate: 0.3
+  health: 10
+  score: 100
+  showDamageDuration: 0.1
+  powerUpDropChance: 1
+  originalColors: []
+  materials: []
+  showingDamage: 0
+  damageDoneTime: 0
+  notifiedOfDestruction: 0
+  parts:
+  - name: Cockpit
+    health: 10
+    protectedBy:
+    - Fuselage
+    go: {fileID: 0}
+    mat: {fileID: 0}
+  - name: Fuselage
+    health: 10
+    protectedBy:
+    - WingL
+    - WingR
+    go: {fileID: 0}
+    mat: {fileID: 0}
+  - name: WingL
+    health: 10
+    protectedBy: []
+    go: {fileID: 0}
+    mat: {fileID: 0}
+  - name: WingR
+    health: 10
+    protectedBy: []
+    go: {fileID: 0}
+    mat: {fileID: 0}
 --- !u!135 &135852798525832778
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -387,8 +431,8 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &135966236840680844
-SphereCollider:
+--- !u!136 &136518073132198640
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -396,6 +440,33 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
   m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &136881689196166646
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1859235801920254}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 0
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &136939004199426058
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1885910551756700}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}

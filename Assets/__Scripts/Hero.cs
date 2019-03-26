@@ -103,19 +103,19 @@ public class Hero : MonoBehaviour {
             case WeaponType.shield:
                 shieldLevel++;
                 break;
-
             default:
-                if ( pu.type == weapons[0].type){
+                if (pu.type == weapons[0].type)
+                {
                     Weapon w = GetEmptyWeaponSlot();
                     if (w != null)
                     {
                         w.SetType(pu.type);
                     }
-                    else
-                    {
-                        ClearWeapons();
-                        weapons[0].SetType(pu.type);
-                    }
+                }
+                else
+                {
+                    ClearWeapons();
+                    weapons[0].SetType(pu.type);
                 }
                 break;
         }
@@ -150,12 +150,10 @@ public class Hero : MonoBehaviour {
         }
         return (null);
     }
-
     void ClearWeapons()
     {
         foreach (Weapon w in weapons)
         {
             w.SetType(WeaponType.none);
         }
-    }
-}
+    }}

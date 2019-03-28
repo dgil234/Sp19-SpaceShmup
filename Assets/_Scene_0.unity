@@ -417,11 +417,16 @@ Prefab:
     - target: {fileID: 114552688617981590, guid: 14f3c2187f8a02e46a6bf662f5a9b025,
         type: 2}
       propertyPath: _type
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1291796958453674, guid: 14f3c2187f8a02e46a6bf662f5a9b025, type: 2}
       propertyPath: m_Name
       value: Weapon_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114552688617981590, guid: 14f3c2187f8a02e46a6bf662f5a9b025,
+        type: 2}
+      propertyPath: def.type
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14f3c2187f8a02e46a6bf662f5a9b025, type: 2}
@@ -612,6 +617,11 @@ Prefab:
     - target: {fileID: 1291796958453674, guid: 14f3c2187f8a02e46a6bf662f5a9b025, type: 2}
       propertyPath: m_Name
       value: Weapon_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114552688617981590, guid: 14f3c2187f8a02e46a6bf662f5a9b025,
+        type: 2}
+      propertyPath: def.type
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14f3c2187f8a02e46a6bf662f5a9b025, type: 2}
@@ -1178,7 +1188,7 @@ Prefab:
     - target: {fileID: 114552688617981590, guid: 14f3c2187f8a02e46a6bf662f5a9b025,
         type: 2}
       propertyPath: _type
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1291796958453674, guid: 14f3c2187f8a02e46a6bf662f5a9b025, type: 2}
       propertyPath: m_Name
@@ -1240,7 +1250,7 @@ Prefab:
     - target: {fileID: 114552688617981590, guid: 14f3c2187f8a02e46a6bf662f5a9b025,
         type: 2}
       propertyPath: _type
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1291796958453674, guid: 14f3c2187f8a02e46a6bf662f5a9b025, type: 2}
       propertyPath: m_Name
@@ -1302,7 +1312,7 @@ Prefab:
     - target: {fileID: 114552688617981590, guid: 14f3c2187f8a02e46a6bf662f5a9b025,
         type: 2}
       propertyPath: _type
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1291796958453674, guid: 14f3c2187f8a02e46a6bf662f5a9b025, type: 2}
       propertyPath: m_Name
